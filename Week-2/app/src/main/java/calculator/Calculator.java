@@ -75,6 +75,7 @@ public class Calculator {
 				// Show help text
 				System.out.println("\nhelp -> Shows this message");
 				System.out.println("exit -> Quits the program");
+				System.out.println("code -> Shows the url to find the source code");
 				System.out.println("+ -> Adds two numbers (x + y)");
 				System.out.println("- -> Subtracts two numbers (x - y)");
 				System.out.println("* -> Multiplies two numbers (x * y)");
@@ -95,6 +96,14 @@ public class Calculator {
 			if (rawUserInputString.equals("exit") == true) {
 				// Exit the calculator
 				System.exit(0);
+			}
+
+			if (rawUserInputString.equals("code") == true) {
+				// Print out the url
+				System.out.println("https://github.com/MaxineToTheStars/AP-Computer-Science/tree/main/Week-2");
+
+				// Continue the loop
+				continue;
 			}
 
 			// Execute
