@@ -16,6 +16,8 @@ import javax.script.ScriptEngineManager;
  * that works in the command line
  * 
  * @author https://github.com/MaxineToTheStars
+ * @implNote No safety checks are being done so theoretically speaking this has
+ *           a very bad security flaw lmao
  */
 
 // Classes
@@ -46,11 +48,15 @@ public class Calculator {
 		// Input handler
 		Scanner rawInputScanner = new Scanner(System.in);
 
-		// Evaluation engine
+		// Create an engine manager
 		ScriptEngineManager engineManager = new ScriptEngineManager();
+
+		// Evaluation engine
 		// “Any application that can be written in JavaScript, will eventually be
 		// written in JavaScript.” -- Jeff Atwood
 		ScriptEngine javaScriptEngine = engineManager.getEngineByName("js");
+
+		// Custom commands that can be executed
 		String customCommandsString = "function rand(x){ return Math.floor(Math.random() * x); } function sqrt(x){ return Math.sqrt(x); } function pow(x, y){ return Math.pow(x, y); } function abs(x){ return Math.abs(x); }";
 
 		// Execution loop
@@ -64,7 +70,7 @@ public class Calculator {
 				rawUserInputString = rawInputScanner.nextLine().toLowerCase();
 			}
 
-			// Parse command
+			// Parse commands
 			if (rawUserInputString.equals("help") == true) {
 				// Show help text
 				System.out.println("\nhelp -> Shows this message");
@@ -96,7 +102,6 @@ public class Calculator {
 				System.out.println(javaScriptEngine.eval(customCommandsString + rawUserInputString));
 			} catch (Exception e) {
 				System.err.println("Syntax Error or something");
-				System.out.println(e);
 			}
 		}
 
