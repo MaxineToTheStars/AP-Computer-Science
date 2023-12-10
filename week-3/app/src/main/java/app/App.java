@@ -155,7 +155,7 @@ public class App {
 				break;
 			}
 
-			if (this._monsterAggression >= Math.floor(Math.random() * this.MAX_MONSTER_AGGRESSION)) {
+			if (this._monsterAggression >= Math.floor(Math.random() * this.MAX_MONSTER_AGGRESSION) && player.isInvincible() == false) {
 				System.out.println("[Death]\n" + Story.getRandomDeathString());
 				break;
 			}
@@ -165,7 +165,9 @@ public class App {
 					"-- [" + Story.getRandomChoiceTitleString() + "] --\n" + Story.getRandomNeutralIdleString());
 
 			// Show monster aggression level
-			System.out.print((this._monsterAggression <= Math.floor(Math.random() * this.MAX_MONSTER_AGGRESSION)) ? "\n~~ " + Story.getRandomFarMessageString() + " ~~\n" : "\n~~ " + Story.getRandomCloseMessageString() + " ~~\n");;
+			System.out.print((this._monsterAggression <= Math.floor(Math.random() * this.MAX_MONSTER_AGGRESSION))
+					? "\n~~ " + Story.getRandomFarMessageString() + " ~~\n"
+					: "\n~~ " + Story.getRandomCloseMessageString() + " ~~\n");
 
 			// Get available movement options
 			String[][] availableOptionStrings = Story.getRandomMovementOptionsString();
@@ -209,6 +211,14 @@ public class App {
 
 			// Don't skip the first roll now
 			this._skipFirstRoll = false;
+		}
+
+		// Show quit message
+		System.out.println("\nPress \"Enter\" to quit");
+
+		// Wait for input
+		while (!this._rawInputScanner.nextLine().toLowerCase().equals("")) {
+
 		}
 
 	}
