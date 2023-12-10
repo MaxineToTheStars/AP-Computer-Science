@@ -31,3 +31,10 @@ application {
 	// Define the main class for the application.
 	mainClass.set("app.App")
 }
+
+tasks.withType(Jar::class) {
+	manifest {
+		attributes["Manifest-Version"] = "1.0"
+		attributes["Main-Class"] = "app.App"
+	}
+}
