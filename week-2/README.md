@@ -6,7 +6,7 @@
 ---
 
 ## To Run
-- Download this repo
+- Download this repository
 - Navigate to Week #2 folder
 - Run ``gradle build``
 - Execute the jar located in ``/app/build/libs/*.jar`` with the [MaxTime JRE](https://github.com/MaxineToTheStars/MaxTime-JRE)

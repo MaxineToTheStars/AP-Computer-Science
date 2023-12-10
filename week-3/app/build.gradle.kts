@@ -29,5 +29,5 @@ java {
 
 application {
 	// Define the main class for the application.
-	mainClass.set("mazegame.App")
+	mainClass.set("app.App")
 }
