@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
 /**
  * Week #4 || Encryption/Decryption
  * <p>
- * A very shity turing machine
+ * A very shitty turing machine
  * 
  * @author https://github.com/MaxineToTheStars
  * @implNote May god save this world from me
@@ -69,21 +69,30 @@ public class App {
 			int convertedString = Integer.parseInt(rawUserPrompt);
 			switch (convertedString) {
 				case 1:
+					// Handle encryption
 					this._handleEncryption();
 					break;
 				case 2:
+					// Handle decryption
 					this._handleDecryption();
 					break;
 				case 3:
-					break;
-				case 4:
 					// Show help message
 					this._uiShowHelpMessage();
+					break;
+				case 4:
+					// Quit
+					System.exit(0);
 					break;
 				default:
 					// Option not valid
 					System.out.println("Invalid Option!");
 					break;
+			}
+
+			// Add exception for the help message
+			if (convertedString == 4) {
+				continue;
 			}
 
 			// Show help message again
@@ -241,7 +250,7 @@ public class App {
 	 */
 	private void _uiShowHelpMessage() {
 		System.out.println(
-				"\n--------\n(1) Encrypt Message\n(2) Decrypt Message\n(3) Verbose Encryption and Decryption\n(4) Show this Help Message\n--------");
+				"\n--------\n(1) Encrypt Message\n(2) Decrypt Message\n\n(3) Show this Help Message\n(4) Quit the Program--------");
 	}
 
 	/**
