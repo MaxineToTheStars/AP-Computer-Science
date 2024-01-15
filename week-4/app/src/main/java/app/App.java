@@ -250,7 +250,7 @@ public class App {
 	 */
 	private void _uiShowHelpMessage() {
 		System.out.println(
-				"\n--------\n(1) Encrypt Message\n(2) Decrypt Message\n\n(3) Show this Help Message\n(4) Quit the Program--------");
+				"\n--------\n(1) Encrypt Message\n(2) Decrypt Message\n\n(3) Show this Help Message\n(4) Quit the Program\n--------");
 	}
 
 	/**
