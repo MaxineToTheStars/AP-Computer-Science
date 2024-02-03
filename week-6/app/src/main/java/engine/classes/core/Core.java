@@ -28,10 +28,8 @@ public class Core {
 
 	// Constants
 	public static int updateInterval;
-	public static final String VERSION_STRING = "v1.1.0";
+	public static final String VERSION_STRING = "v1.2.0";
 	public static final int _INPUT_THREAD_MAXIMUM_BUFFER_SIZE = 4;
-	// public static final int _INPUT_THREAD_UPDATE_DELAY = 100; [Deprecated]
-	// public static final int _RENDERING_THREAD_UPDATE_DELAY = 100; [Deprecated]
 
 	// Public Variables
 
@@ -126,7 +124,7 @@ public class Core {
 		// Try to sleep
 		try {
 			// Sleep
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 		} catch (InterruptedException exception) {
 			// Assume CTRL+C was hit, close the game
 			System.exit(-1);

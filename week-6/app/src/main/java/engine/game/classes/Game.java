@@ -127,7 +127,7 @@ public class Game {
 			if (this.winCheck(0) == 0) {
 				// Stop background music
 				backgroundAudio.stop();
-				
+
 				// Play the win audio
 				winAudio.play();
 
@@ -147,7 +147,7 @@ public class Game {
 			if (this.winCheck(1) == 1) {
 				// Stop background music
 				backgroundAudio.stop();
-				
+
 				// Play the win audio
 				winAudio.play();
 
@@ -277,7 +277,6 @@ public class Game {
 		}
 
 		// Diagonal win check
-
 		return -1;
 	}
 
