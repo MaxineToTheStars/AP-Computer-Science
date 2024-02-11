@@ -136,7 +136,7 @@ public class Renderer extends Thread {
 				ProcessBuilder clearScreenProcessBuilder = new ProcessBuilder("cmd", "/c", "cls");
 
 				// Merge with main output channel
-				clearScreenProcessBuilder.inheritIO().start(); // .waitFor() <- Should not be needed as that will block
+				clearScreenProcessBuilder.inheritIO().start().waitFor(); // .waitFor() <- Should not be needed as that will block
 																// the current thread
 			} catch (Exception e) {
 				// Failed to clear

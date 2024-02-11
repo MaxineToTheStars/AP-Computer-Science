@@ -230,7 +230,7 @@ public class Game {
 		for (int i = 1; i < this._boardPositions.length; i++) {
 			// Horizontal counter/Reset counter
 			int horizontalCount = 0;
-			int neededHorizontalCount = 4;
+			final int neededHorizontalCount = 4;
 
 			// Loop
 			for (int j = 1; j < this._boardPositions[i].length; j++) {
@@ -255,7 +255,7 @@ public class Game {
 		for (int i = 1; i < this._boardPositions.length; i++) {
 			// Vertical counter/Reset counter
 			int verticalCount = 0;
-			int neededVerticalCount = 3;
+			final int neededVerticalCount = 3;
 
 			// Loop
 			for (int j = 1; j < this._boardPositions[i].length; j++) {
@@ -276,7 +276,21 @@ public class Game {
 			}
 		}
 
-		// Diagonal win check
+		// Could not get diagonal checking to work at all
+		// Horizontal win check
+		for (int i = 1; i < this._boardPositions.length - 4; i++) {
+			// Loop
+			for (int j = 1; j < this._boardPositions[i].length - 4; j++) {
+				// Get the current play object
+				if ((this._boardPositions[i][j] == objectType) && (this._boardPositions[i + 1][j + 1] == objectType
+						&& (this._boardPositions[i + 2][j + 2] == objectType)
+						&& (this._boardPositions[i + 3][j + 3] == objectType))) {
+					return objectType;
+				}
+			}
+		}
+
+		// Default
 		return -1;
 	}
 
