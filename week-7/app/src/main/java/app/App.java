@@ -86,7 +86,7 @@ public class App {
 
                 // Allow editing
                 System.out.println(
-                        "|| (E)dit {propertyIndex} {value, value} - Allows editing for the user\n|| (Si)gn-out");
+                        "|| (E)dit {propertyIndex} {value value} - Allows editing for the user\n|| (Si)gn-out");
                 System.out.print("> ");
 
                 // Wait for input
