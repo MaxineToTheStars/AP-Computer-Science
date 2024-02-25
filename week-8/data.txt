@@ -1,0 +1,3 @@
+Room 1#    --- Booked from 1/1/2024 - 6/1/2024 to bob || 91$
+Room 2#    --- Booked from 1/1/2024 - 6/1/2024 to bob || 84$
+Room 3#    --- Booked from 1/1/2024 - 8/1/2024 to dick || 63$
