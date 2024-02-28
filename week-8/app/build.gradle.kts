@@ -37,6 +37,13 @@ application {
     mainClass.set("app.App")
 }
 
+tasks.withType(Jar::class) {
+	manifest {
+		attributes["Manifest-Version"] = "1.0"
+		attributes["Main-Class"] = "app.App"
+	}
+}
+
 // tasks.named<Test>("test") {
 //     // Use JUnit Platform for unit tests.
 //     useJUnitPlatform()
